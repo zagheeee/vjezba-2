@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { nanoid } from 'nanoid';
+import {zbroj, razlika, umnozak, dijeljenje} from './Utilities';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Luka Žagar</h1>
+      {nanoid()},
+      <div>
+        2 + 2 = {zbroj(2,2)}
+      </div>
+      <div>
+        10 - 2 = {razlika(10,2)}
+      </div>
+      <div>
+        2 * 2 = {umnozak(2,2)}
+      </div>
+      <div>
+        100 / 2 = {dijeljenje(100,2)}
+      </div>
     </div>
+    
   );
 }
 
